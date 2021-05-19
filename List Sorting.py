@@ -1,3 +1,5 @@
+# This will sort lists that are either integer or string
+
 def sortDescending(intList):
     newSortedList = sorted(intList, key=int, reverse=True)
     return newSortedList
@@ -10,21 +12,6 @@ def sortDescending(strList):
 def sortAscending(strList):    
     newSortedList = sorted(strList, key=str, reverse=False)
     return newSortedList
-
-def testingStrings():
-    assert sortDescending(['abc', 'cde', 'zef']) == ['zef', 'cde', 'abc'], "Should be ['zef', 'cde', 'abc']"
-    assert sortAscending(['abc', 'cde', 'zef']) == ['abc', 'cde', 'zef'], "Should be ['abc', 'cde', 'zef']"
-    assert sortDescending(['abc', 'abcd', 'abbc']) == ['abcd', 'abc', 'abbc'], "Should be ['abcd', 'abc', 'abbc']"
-    assert sortAscending(['abc', 'abcd', 'abbc']) == ['abbc', 'abc', 'abcd'], "Should be ['abbc', 'abc', 'abcd']"
-def testingIntegers():
-    assert sortDescending([1, 1, 1]) == [1, 1, 1], "Should be [1, 1, 1]"
-    assert sortAscending([1, 1, 1]) == [1, 1, 1], "Should be [1, 1, 1]"
-    assert sortDescending([1, 0, 0]) == [1, 0, 0], "Should be [0, 0, 0]"
-    assert sortAscending([1, 0, 0]) == [0, 0, 1], "Should be [0, 0, 1]"
-    assert sortDescending([-1, 0, 10000000]) == [10000000, 0, -1], "Should be [10000000, 0, -1]"
-    assert sortAscending([-1, 0, 10000000]) == [-1, 0, 10000000], "Should be [-1, 0, 10000000]"
-    assert sortDescending([-1, -6, -1]) == [-1, -1, -6], "Should be [-1, -1, -6]"
-    assert sortAscending([-1, -6, -1]) == [-6, -1, -1], "Should be [-6, -1, -1]"
     
 def main():
     typeOfList = input("Does your list have integers or strings? ")
@@ -47,6 +34,21 @@ def main():
         print(f'Your list sorted in descending order is: {sortDescending(userList)}')
         print(f'Your list sorted in ascending order is: {sortAscending(userList)}')
 
-#testingStrings()
-#testingIntegers()
+def testingStrings():
+    assert sortDescending(['abc', 'cde', 'zef']) == ['zef', 'cde', 'abc'], "Should be ['zef', 'cde', 'abc']"
+    assert sortAscending(['abc', 'cde', 'zef']) == ['abc', 'cde', 'zef'], "Should be ['abc', 'cde', 'zef']"
+    assert sortDescending(['abc', 'abcd', 'abbc']) == ['abcd', 'abc', 'abbc'], "Should be ['abcd', 'abc', 'abbc']"
+    assert sortAscending(['abc', 'abcd', 'abbc']) == ['abbc', 'abc', 'abcd'], "Should be ['abbc', 'abc', 'abcd']"
+def testingIntegers():
+    assert sortDescending([1, 1, 1]) == [1, 1, 1], "Should be [1, 1, 1]"
+    assert sortAscending([1, 1, 1]) == [1, 1, 1], "Should be [1, 1, 1]"
+    assert sortDescending([1, 0, 0]) == [1, 0, 0], "Should be [0, 0, 0]"
+    assert sortAscending([1, 0, 0]) == [0, 0, 1], "Should be [0, 0, 1]"
+    assert sortDescending([-1, 0, 10000000]) == [10000000, 0, -1], "Should be [10000000, 0, -1]"
+    assert sortAscending([-1, 0, 10000000]) == [-1, 0, 10000000], "Should be [-1, 0, 10000000]"
+    assert sortDescending([-1, -6, -1]) == [-1, -1, -6], "Should be [-1, -1, -6]"
+    assert sortAscending([-1, -6, -1]) == [-6, -1, -1], "Should be [-6, -1, -1]"
+
+testingStrings()
+testingIntegers()
 main()
