@@ -1,3 +1,3 @@
 # COSC499GithubExercise
 
-This sorts arrays that are integers in descending and ascending order. 
+This sorts arrays that are integers and strings in descending and ascending order.
