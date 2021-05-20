@@ -46,9 +46,7 @@ def testingIntegers():
     assert sortAscending([1, 0, 0]) == [0, 0, 1], "Should be [0, 0, 1]"
     assert sortDescending([-1, 0, 10000000]) == [10000000, 0, -1], "Should be [10000000, 0, -1]"
     assert sortAscending([-1, 0, 10000000]) == [-1, 0, 10000000], "Should be [-1, 0, 10000000]"
-    assert sortDescending([-1, -6, -1]) == [-1, -1, -6], "Should be [-1, -1, -6]"
-    assert sortAscending([-1, -6, -1]) == [-6, -1, -1], "Should be [-6, -1, -1]"
 
-testingStrings()
-testingIntegers()
+#testingStrings()
+#testingIntegers()
 main()
